@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strong Password</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+	<div class="container">
+		<h2 class="heading">Your password Generator</h2>
+		<div class="password-container">
+			<p class="password-content"></p>
+			<button class="copy-btn">
+				<img src="assets/copy.svg" alt="icon copy">
+			</button>
+		</div>
+
+		<div class="range-group">
+			<label for="range">Password Length : 10</label>
+			<input type="range" id="range" min="4" max="20" value="10">
+		</div>
+
+		<div class="checkboxes-container">
+			<div class="checkbox-group">
+				<input type="checkbox" id="lowercaseChars" checked>
+				<label for="lowercaseChars">Contain lowercase characters</label>
+			</div>
+
+			<div class="checkbox-group">
+				<input type="checkbox" id="uppercaseChars" checked>
+				<label for="uppercaseChars">Contain uppercase characters</label>
+			</div>
+
+			<div class="checkbox-group">
+				<input type="checkbox" id="numbers" checked>
+				<label for="numbers">Contain numbers</label>
+			</div>
+
+			<div class="checkbox-group">
+				<input type="checkbox" id="symbols" checked>
+				<label for="symbols">Contain symbols</label>
+			</div>
+		</div>
+
+		<button class="generate-btn">Generate</button>
+		<p class="error-msg"></p>
+	</div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
