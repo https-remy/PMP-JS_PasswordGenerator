@@ -74,9 +74,16 @@ function getRandomNumber(min, max) {
 }
 
 const copyBtn = document.querySelector('.copy-btn');
-
+let locked = false;
 copyBtn.addEventListener('click', () => {
+	if (locked) return;
 	navigator.clipboard.writeText(passwordContent.textContent);
+	copyBtn.classList.add('active');
+	locked = true;
+	setTimeout(() => {
+		copyBtn.classList.remove('active');
+		locked = false;
+	}, 1000);
 });
 
 
